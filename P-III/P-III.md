@@ -7,7 +7,11 @@
 
 ### Cronograma
 
+<img src="/P-III/img/crono-progra-III.png" alt="cronograma programacion III 2025" width="300" height="800">
+
 ### Metodos de evaluacion
+
+<img src="/P-III/img/met-eval-progra-III.png" alt="metodologia de evaluacion programacion III 2025" width="300" height="800">
 
 ### Tecnologias
 
