@@ -1,38 +1,19 @@
-general
+# 10/03/2025
 
-miercoles tp
-lunes repaso teorico
-miercoles 
+### Contraseñas
 
-de aca al 26 de marzo repaso
+- General: programacion3-2025
+- Comision 7: prog30-2025
 
-los tps no se entregan, no son con nota
+### Cronograma
 
-tp final integrador con nota
+### Metodos de evaluacion
 
-parcial con nota el 14 de mayo
+### Tecnologias
 
-recu 28 de mayo
-
-fecha de entrag del tp. dos etapas 9 de junio y 11 de junio.
-
-patrones de disenio
-
-api rest
-
-http
-
-postman
-
-notaciones
-
-inyeccion de dependencia
-
-infraestructura
-
-jdk 22
-mysql workbench
-maven
+- jdk 22
+- mysql workbench
+- maven
 
 ## 12/03/2025
 
