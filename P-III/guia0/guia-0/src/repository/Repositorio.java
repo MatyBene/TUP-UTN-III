@@ -12,11 +12,11 @@ public class Repositorio<T extends Media> implements IRepositorio<T>{
     private List<T> lista = new ArrayList<>();
 
     /**
- * Agrega un elemento de media al repositorio.
- *
- * @param media el elemento de media a agregar
- * @throws IdentificadorDuplicadoException si un elemento de media con el mismo ID ya existe en el repositorio
- */
+     * Agrega un elemento de media al repositorio.
+     *
+     * @param media el elemento de media a agregar
+     * @throws IdentificadorDuplicadoException si un elemento de media con el mismo ID ya existe en el repositorio
+     */
     @Override
     public void agregarMedia(T media) {
         for(T obj : lista){
@@ -29,10 +29,10 @@ public class Repositorio<T extends Media> implements IRepositorio<T>{
     }
 
     /**
- * Elimina un elemento de media del repositorio por su ID.
- *
- * @param id el ID del elemento de media a eliminar
- */
+     * Elimina un elemento de media del repositorio por su ID.
+     *
+     * @param id el ID del elemento de media a eliminar
+     */
     @Override
     public void eliminarMedia(String id) {
         lista.removeIf(media -> media.getId().equals(id));
