@@ -46,9 +46,8 @@ public class Repositorio<T extends Media> implements IRepositorio<T>{
      */
     @Override
     public List<T> obtenerTodos() {
-        List<T> coleccion = new ArrayList<>();
-        coleccion.sort(Comparator.comparing(Media::getTitulo));
-        return coleccion;
+        lista.sort(Comparator.comparing(Media::getTitulo));
+        return lista;
     }
 
     @Override

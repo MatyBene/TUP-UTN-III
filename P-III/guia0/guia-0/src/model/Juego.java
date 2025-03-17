@@ -2,21 +2,21 @@ package model;
 
 public class Juego extends Media{
 
-    private int version;
+    private String version;
 
     public Juego() {
     }
 
-    public Juego(String titulo, String creador, String genero, int version) {
+    public Juego(String titulo, String creador, String genero, String version) {
         super(titulo, creador, genero);
         this.version = version;
     }
 
-    public int getVersion() {
+    public String getVersion() {
         return version;
     }
 
-    public void setVersion(int version) {
+    public void setVersion(String version) {
         this.version = version;
     }
 }

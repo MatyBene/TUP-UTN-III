@@ -7,6 +7,7 @@ import repository.Repositorio;
 
 import java.time.LocalDate;
 import java.time.format.DateTimeParseException;
+import java.util.List;
 import java.util.Scanner;
 
 public class Menu implements IMenu{
@@ -60,17 +61,17 @@ public class Menu implements IMenu{
         int opcion = scanner.nextInt();
         scanner.nextLine();
 
-        System.out.print("Título: ");
+        System.out.print("Título: \n");
         String titulo = scanner.nextLine();
-        System.out.print("Creador: ");
+        System.out.print("Creador: \n");
         String creador = scanner.nextLine();
-        System.out.print("Género: ");
+        System.out.print("Género: \n");
         String genero = scanner.nextLine();
 
         switch(opcion){
             case 1:
                 System.out.println("Version: ");
-                int version = scanner.nextInt();
+                String version = scanner.nextLine();
                 Juego juego = new Juego(titulo, creador, genero, version);
                 repositorio.agregarMedia(juego);
                 break;
@@ -94,7 +95,10 @@ public class Menu implements IMenu{
 
     @Override
     public void mostrarLista() {
-
+        List<Media> coleccion = repositorio.obtenerTodos();
+        for (Media media : coleccion) {
+            System.out.println(media.getTitulo() + " - " + media.getId());
+        }
     }
 
     @Override
