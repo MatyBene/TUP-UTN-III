@@ -55,6 +55,24 @@ public class Repositorio<T extends Media> implements IRepositorio<T>{
         lista.sort(Comparator.comparing(Media::getTitulo));
         return lista;
     }
+    
+    /**
+     * Obtiene una lista de todos los juegos en el repositorio,
+     * ordenados por título.
+     *
+     * @return una lista de todos los juegos ordenados por título
+     */
+    @Override
+    public List<Juego> obtenerJuegos(){
+        List<Juego> juegos = new ArrayList<>();
+        for(T media : lista){
+            if(media instanceof Juego j){
+                juegos.add(j);
+            }
+        }
+        juegos.sort(Comparator.comparing(Media::getTitulo));
+        return juegos;
+    }
 
     @Override
     public void modificarMedia(String id, T nuevoMedia) {
