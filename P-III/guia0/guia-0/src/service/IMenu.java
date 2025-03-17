@@ -8,6 +8,6 @@ public interface IMenu {
     void mostrarLista();
     void filtrarXTipo();
     void filtrarXGenero();
-    void buscarXId();
+    void mostrarXId();
 
 }

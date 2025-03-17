@@ -41,7 +41,7 @@ public class Menu implements IMenu{
     }
 
     @Override
-    public void buscarXId() {
+    public void mostrarXId() {
         System.out.println("Ingrese el ID que desea buscar: ");
         String idABuscar = scanner.nextLine();
         Media media = repositorio.buscarXId(idABuscar);
