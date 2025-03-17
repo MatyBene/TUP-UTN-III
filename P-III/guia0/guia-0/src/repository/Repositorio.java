@@ -1,15 +1,21 @@
 package repository;
 
 import exception.IdentificadorDuplicadoException;
+import model.Expansion;
+import model.Juego;
 import model.Media;
 
+import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
 
 public class Repositorio<T extends Media> implements IRepositorio<T>{
 
-    private List<T> lista = new ArrayList<>();
+    private List<T> lista = new ArrayList<>(List.of(
+            (T) new Juego("j1", "c1", "g1", "1"),
+            (T) new Expansion("e1", "c2", "g2", LocalDate.of(1996, 9, 6))
+    ));
 
     /**
      * Agrega un elemento de media al repositorio.

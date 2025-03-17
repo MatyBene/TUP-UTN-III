@@ -90,7 +90,9 @@ public class Menu implements IMenu{
 
     @Override
     public void eliminarMedia() {
-
+        System.out.println("Ingresar el id: ");
+        String idAEliminar = scanner.nextLine();
+        repositorio.eliminarMedia(idAEliminar);
     }
 
     @Override
