@@ -25,11 +25,19 @@ https://learn.microsoft.com/es-es/training/modules/generate-documentation-using-
 
 ## 17/03/2025
 
-interfaz funcional, tiene un solo metodo abstracto
+- interfaz funcional, tiene un solo metodo abstracto
 
-clase anonima, es una clase sin nombre que se define e instancia en el mismo lugar donde se usa, generalmente para proporcionar implementaciones rápidas de interfaces o clases abstractas.
+- clase anonima, es una clase sin nombre que se define e instancia en el mismo lugar donde se usa, generalmente para proporcionar implementaciones rápidas de interfaces o clases abstractas.
 
-expresion lambda, instancia de una clase anonima
+- expresion lambda, instancia de una clase anonima
 
 las interfaces pueden tener cuerpo pero son default
 
+bigOnotation, recomendacion para ver la perfo
+
+### Excepciones
+
+las dos grandes familias
+pueden tener atributos
+
+arrancar con linux o ubuntu
