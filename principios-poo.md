@@ -5,6 +5,7 @@ El principio SOLID es un conjunto de principios fundamentales en la programacion
 - S - Principio ded responsabilidad unica (SRP)
     
         Cada clase debe tener una unica razon para cambiar, es decir, deber ser responsable de una sola funcionalidad dentro del sistema. Si una clase tiene multiples responsabilidades, cualquier cambio en una de ellas podria afectar a las demas, lo que aumenta el acoplamiento y dificulta el mantenimiento.
+        
 - O - Principio de abierto/cerrado (OCP)
 
         El codigo debe estar abierto para la extension, pero cerrado para la modificacion. Esto significa que debemos agregar nuevas funcionalidades sin modificar el codigo existente, lo que reduce el riesgo de introducir errores y facilita el mantenimiento.
