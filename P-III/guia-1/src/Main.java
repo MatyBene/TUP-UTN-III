@@ -1,6 +1,8 @@
 import java.util.Comparator;
 import java.util.List;
+import java.util.Map;
 import java.util.Scanner;
+import java.util.stream.Collectors;
 
 public class Main {
 
@@ -47,7 +49,7 @@ public class Main {
                 case 7 -> concatenarNombres();
                 case 8 -> eliminarDuplicados();
                 case 9 -> obtenerTop3Numeros();
-                //case 10 -> agruparPalabrasPorLongitud();
+                case 10 -> agruparPalabrasPorLongitud();
                 //case 11 -> productoDeNumeros();
                 //case 12 -> nombreMasLargo();
                 //case 13 -> listaEnterosComoString();
@@ -118,11 +120,12 @@ public class Main {
         System.out.println("Los tres numeros mas grandes son: " + top3);
     }
 
-//    // 10
-//    public static void agruparPalabrasPorLongitud() {
-//
-//    }
-//
+    // 10
+    public static void agruparPalabrasPorLongitud() {
+        Map<Integer, List<String>> agrupadas = palabras.stream().collect(Collectors.groupingBy(String::length));
+        System.out.println("Palabras agrupadas por longitud: " + agrupadas);
+    }
+
 //    // 11
 //    public static void productoDeNumeros() {
 //
