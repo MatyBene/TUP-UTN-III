@@ -51,12 +51,12 @@ public class Main {
                 case 9 -> obtenerTop3Numeros();
                 case 10 -> agruparPalabrasPorLongitud();
                 case 11 -> productoDeNumeros();
-                //case 12 -> nombreMasLargo();
-                //case 13 -> listaEnterosComoString();
-                //case 14 -> agruparParesEImpares();
-                //case 15 -> sumaDeCuadradosImpares();
-                //case 0 -> System.out.println("Saliendo del programa...");
-                //default -> System.out.println("Opción no válida, intente de nuevo.");
+                case 12 -> nombreMasLargo();
+                case 13 -> listaEnterosComoString();
+                case 14 -> agruparParesEImpares();
+                case 15 -> sumaDeCuadradosImpares();
+                case 0 -> System.out.println("Saliendo del programa...");
+                default -> System.out.println("Opción no válida, intente de nuevo.");
             }
         } while (opcion != 0);
 
@@ -132,23 +132,23 @@ public class Main {
         System.out.println("El producto de todos los numeros es: " + producto);
     }
 
-//    // 12
-//    public static void nombreMasLargo() {
-//
-//    }
-//
-//    // 13
-//    public static void listaEnterosComoString() {
-//
-//    }
-//
-//    // 14
-//    public static void agruparParesEImpares() {
-//
-//    }
-//
-//    // 15
-//    public static void sumaDeCuadradosImpares() {
-//
-//    }
+    // 12
+    public static void nombreMasLargo() {
+
+    }
+
+    // 13
+    public static void listaEnterosComoString() {
+
+    }
+
+    // 14
+    public static void agruparParesEImpares() {
+
+    }
+
+    // 15
+    public static void sumaDeCuadradosImpares() {
+
+    }
 }
