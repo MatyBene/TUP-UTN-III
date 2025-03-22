@@ -44,7 +44,7 @@ public class Main {
                 case 5 -> obtenerPrimeros5Elementos();
                 case 6 -> convertirPalabrasALongitud();
                 case 7 -> concatenarNombres();
-                //case 8 -> eliminarDuplicados();
+                case 8 -> eliminarDuplicados();
                 //case 9 -> obtenerTop3Numeros();
                 //case 10 -> agruparPalabrasPorLongitud();
                 //case 11 -> productoDeNumeros();
@@ -103,4 +103,11 @@ public class Main {
         String nombresConcatenados = nombres.stream().reduce((x, y) -> x + ", " + y).orElse("");
         System.out.println("Nombres concatenados: " + nombresConcatenados);
     }
+
+    // 8
+    public static void eliminarDuplicados() {
+        List<Integer> noRepetidos = numeros.stream().distinct().toList();
+        System.out.println("Lista de numeros no repetidos: " + noRepetidos);
+    }
+
 }
