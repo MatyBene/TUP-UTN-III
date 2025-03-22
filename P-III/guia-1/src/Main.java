@@ -50,7 +50,7 @@ public class Main {
                 case 8 -> eliminarDuplicados();
                 case 9 -> obtenerTop3Numeros();
                 case 10 -> agruparPalabrasPorLongitud();
-                //case 11 -> productoDeNumeros();
+                case 11 -> productoDeNumeros();
                 //case 12 -> nombreMasLargo();
                 //case 13 -> listaEnterosComoString();
                 //case 14 -> agruparParesEImpares();
@@ -126,11 +126,12 @@ public class Main {
         System.out.println("Palabras agrupadas por longitud: " + agrupadas);
     }
 
-//    // 11
-//    public static void productoDeNumeros() {
-//
-//    }
-//
+    // 11
+    public static void productoDeNumeros() {
+        int producto = numeros.stream().reduce((x, y) -> x * y).orElse(0);
+        System.out.println("El producto de todos los numeros es: " + producto);
+    }
+
 //    // 12
 //    public static void nombreMasLargo() {
 //
