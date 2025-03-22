@@ -39,10 +39,10 @@ public class Main {
             switch (opcion) {
                 case 1 -> filtrarNumerosPares();
                 case 2 -> transformarNombresAMayusculas();
-                //case 3 -> ordenarListaNumeros();
-                //case 4 -> contarMayoresQue(5) ;
-                //case 5 -> obtenerPrimeros5Elementos();
-                //case 6 -> convertirPalabrasALongitud();
+                case 3 -> ordenarListaNumeros();
+                case 4 -> contarMayoresQue(5);
+                case 5 -> obtenerPrimeros5Elementos();
+                case 6 -> convertirPalabrasALongitud();
                 //case 7 -> concatenarNombres();
                 //case 8 -> eliminarDuplicados();
                 //case 9 -> obtenerTop3Numeros();
@@ -72,5 +72,29 @@ public class Main {
     public static void transformarNombresAMayusculas() {
         List<String> mayusculas = nombres.stream().map(String::toUpperCase).toList();
         System.out.println("Lista de nombres en mayusculas: " + mayusculas);
+    }
+
+    // 3
+    public static void ordenarListaNumeros() {
+        List<Integer> ordenados = numeros.stream().sorted().toList();
+        System.out.println("Lista de numeros ordenados: " + ordenados);
+    }
+
+    // 4
+    public static void contarMayoresQue(int x) {
+        int mayores = (int) numeros.stream().filter(n -> n > x).count();
+        System.out.println("La cantidad de numeros mayores a " + x + " es: " + mayores);
+    }
+
+    // 5
+    public static void obtenerPrimeros5Elementos() {
+        List<Integer> primeros5 = numeros.stream().limit(5).toList();
+        System.out.println("Los primeros 5 elementos de la lista son: " + primeros5);
+    }
+
+    // 6
+    public static void convertirPalabrasALongitud(){
+        List<Integer> longitudPalabras = palabras.stream().map(String::length).toList();
+        System.out.println("Lista con la longitud de cada palabra: " + longitudPalabras);
     }
 }
