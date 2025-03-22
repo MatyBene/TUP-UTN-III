@@ -43,7 +43,7 @@ public class Main {
                 case 4 -> contarMayoresQue(5);
                 case 5 -> obtenerPrimeros5Elementos();
                 case 6 -> convertirPalabrasALongitud();
-                //case 7 -> concatenarNombres();
+                case 7 -> concatenarNombres();
                 //case 8 -> eliminarDuplicados();
                 //case 9 -> obtenerTop3Numeros();
                 //case 10 -> agruparPalabrasPorLongitud();
@@ -96,5 +96,11 @@ public class Main {
     public static void convertirPalabrasALongitud(){
         List<Integer> longitudPalabras = palabras.stream().map(String::length).toList();
         System.out.println("Lista con la longitud de cada palabra: " + longitudPalabras);
+    }
+
+    // 7
+    public static void concatenarNombres() {
+        String nombresConcatenados = nombres.stream().reduce((x, y) -> x + ", " + y).orElse("");
+        System.out.println("Nombres concatenados: " + nombresConcatenados);
     }
 }
