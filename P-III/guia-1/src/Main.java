@@ -1,3 +1,4 @@
+import java.util.Comparator;
 import java.util.List;
 import java.util.Scanner;
 
@@ -45,7 +46,7 @@ public class Main {
                 case 6 -> convertirPalabrasALongitud();
                 case 7 -> concatenarNombres();
                 case 8 -> eliminarDuplicados();
-                //case 9 -> obtenerTop3Numeros();
+                case 9 -> obtenerTop3Numeros();
                 //case 10 -> agruparPalabrasPorLongitud();
                 //case 11 -> productoDeNumeros();
                 //case 12 -> nombreMasLargo();
@@ -110,4 +111,40 @@ public class Main {
         System.out.println("Lista de numeros no repetidos: " + noRepetidos);
     }
 
+    // 9
+    public static void obtenerTop3Numeros() {
+        List<Integer> top3 = numeros.stream().sorted(Comparator.reverseOrder()).limit(3).toList();
+//        List<Integer> top3 = numeros.stream().sorted(Comparator.reverseOrder()).limit(3).sorted().toList();
+        System.out.println("Los tres numeros mas grandes son: " + top3);
+    }
+
+//    // 10
+//    public static void agruparPalabrasPorLongitud() {
+//
+//    }
+//
+//    // 11
+//    public static void productoDeNumeros() {
+//
+//    }
+//
+//    // 12
+//    public static void nombreMasLargo() {
+//
+//    }
+//
+//    // 13
+//    public static void listaEnterosComoString() {
+//
+//    }
+//
+//    // 14
+//    public static void agruparParesEImpares() {
+//
+//    }
+//
+//    // 15
+//    public static void sumaDeCuadradosImpares() {
+//
+//    }
 }
