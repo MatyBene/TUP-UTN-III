@@ -151,6 +151,7 @@ public class Main {
 
     // 15
     public static void sumaDeCuadradosImpares() {
-
+        Integer suma = numeros.stream().filter(n -> n % 2 != 0).map(n -> n * n).reduce(0, Integer::sum);
+        System.out.println("La suma de los cuadrados de los numeros impares es: " + suma);
     }
 }
