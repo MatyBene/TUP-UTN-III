@@ -137,7 +137,8 @@ public class Main {
 
     // 13
     public static void listaEnterosComoString() {
-
+        String cadena = numeros.stream().map(String::valueOf).collect(Collectors.joining("-"));
+        System.out.println("Cadena de numeros: " + cadena);
     }
 
     // 14
