@@ -1,7 +1,4 @@
-import java.util.Comparator;
-import java.util.List;
-import java.util.Map;
-import java.util.Scanner;
+import java.util.*;
 import java.util.stream.Collectors;
 
 public class Main {
@@ -134,7 +131,8 @@ public class Main {
 
     // 12
     public static void nombreMasLargo() {
-
+        Optional<String> nombre = nombres.stream().reduce((n1, n2) -> n1.length() >= n2.length() ? n1 : n2);
+        nombre.ifPresent(n -> System.out.println("El nombre mas largo de la lista nombres es: " + n));
     }
 
     // 13
