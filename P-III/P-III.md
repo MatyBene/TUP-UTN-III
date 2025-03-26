@@ -41,3 +41,32 @@ las dos grandes familias
 pueden tener atributos
 
 arrancar con linux o ubuntu
+
+# 26/03/2025
+
+modelo
+repositorio
+servicio
+controladora
+
+### Guia Colecciones
+
+Ejercicio 1 – Agenda de contactos
+    
+    HashMap<String, String>
+
+Ejercicio 2 – Lista de tareas
+
+    ArrayList<String>
+
+Ejercicio 3 – Inscripciones únicas
+
+    HashSet<String>
+
+Ejercicio 4 – Catálogo ordenado
+
+    TreeMap<String, Double>
+
+Ejercicio 5 – Sistema de turnos (por gravedad)
+
+    TreeSet<Paciente>
