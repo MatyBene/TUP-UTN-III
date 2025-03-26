@@ -70,3 +70,6 @@ Ejercicio 4 – Catálogo ordenado
 Ejercicio 5 – Sistema de turnos (por gravedad)
 
     TreeSet<Paciente>
+
+## Apunte de programacion funcional
+
