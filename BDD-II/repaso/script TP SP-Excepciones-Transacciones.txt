@@ -1,0 +1,39 @@
+---------------------------------------------
+//PARA EJERCICIOS 1 - 4
+
+
+CREATE TABLE ejemplo_tabla (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nombre VARCHAR(50)
+);
+
+---------------------------------------------
+//PARA EJERCICIOS 5 Y 6
+
+
+CREATE TABLE socios (
+    id_socio INT AUTO_INCREMENT PRIMARY KEY,
+    nombre VARCHAR(50),
+    apellido VARCHAR(50),
+    fecha_nacimiento DATE,
+    direccion VARCHAR(100),
+    telefono VARCHAR(20)
+);
+
+CREATE TABLE planes (
+    id_plan INT AUTO_INCREMENT PRIMARY KEY,
+    nombre VARCHAR(50),
+    duracion INT,
+    precio DECIMAL(10, 2),
+    servicios TEXT
+);
+
+CREATE TABLE actividades (
+    id_actividad INT AUTO_INCREMENT PRIMARY KEY,
+    id_socio INT,
+    id_plan INT,
+    FOREIGN KEY (id_socio) REFERENCES socios(id_socio),
+    FOREIGN KEY (id_plan) REFERENCES planes(id_plan)
+);
+
+
