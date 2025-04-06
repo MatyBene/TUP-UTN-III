@@ -4,9 +4,9 @@ import java.util.stream.Collectors;
 public class Main {
 
     // Listas de datos para usar en los ejercicios
-    private static final List<Integer> numeros = List.of(8, 3, 5, 1, 9, 6, 12, 3, 7, 4, 2, 10, 15, 20);
-    private static final List<String> nombres = List.of("Juan", "Ana", "Pedro", "Carla", "Miguel");
-    private static final List<String> palabras = List.of("Java", "Stream", "Lambda", "Funcional", "API");
+    private static final List<Integer> numbers = List.of(8, 3, 5, 1, 9, 6, 12, 3, 7, 4, 2, 10, 15, 20);
+    private static final List<String> names = List.of("Juan", "Ana", "Pedro", "Carla", "Miguel");
+    private static final List<String> words = List.of("Java", "Stream", "Lambda", "Funcional", "API");
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
@@ -37,21 +37,21 @@ public class Main {
             scanner.nextLine(); // Consumir salto de línea
 
             switch (opcion) {
-                case 1 -> filtrarNumerosPares();
-                case 2 -> transformarNombresAMayusculas();
-                case 3 -> ordenarListaNumeros();
-                case 4 -> contarMayoresQue(5);
-                case 5 -> obtenerPrimeros5Elementos();
-                case 6 -> convertirPalabrasALongitud();
-                case 7 -> concatenarNombres();
-                case 8 -> eliminarDuplicados();
-                case 9 -> obtenerTop3Numeros();
-                case 10 -> agruparPalabrasPorLongitud();
-                case 11 -> productoDeNumeros();
-                case 12 -> nombreMasLargo();
-                case 13 -> listaEnterosComoString();
-                case 14 -> agruparParesEImpares();
-                case 15 -> sumaDeCuadradosImpares();
+                case 1 -> filterEvenNumbers();
+                case 2 -> convertNamesToUppercase();
+                case 3 -> sortNumbersList();
+                case 4 -> countGreaterThan(5);
+                case 5 -> getFirstFiveElements();
+                case 6 -> convertWordsToLength();
+                case 7 -> concatenateNames();
+                case 8 -> removeDuplicates();
+                case 9 -> getTop3Numbers();
+                case 10 -> groupWordsByLength();
+                case 11 -> productOfNumbers();
+                case 12 -> longestName();
+                case 13 -> listOfIntegersAsString();
+                case 14 -> groupEvensAndOdds();
+                case 15 -> sumOfOddSquares();
                 case 0 -> System.out.println("Saliendo del programa...");
                 default -> System.out.println("Opción no válida, intente de nuevo.");
             }
@@ -63,95 +63,137 @@ public class Main {
     // Resolucion de los ejercicios
 
     // 1
-    public static void filtrarNumerosPares() {
-        List<Integer> pares = numeros.stream().filter(n -> n % 2 == 0).toList();
-        System.out.println("Lista de pares: " + pares);
+    public static void filterEvenNumbers() {
+        List<Integer> evenList = numbers.stream()
+                                        .filter(n -> n % 2 == 0)
+                                        .toList();
+
+        System.out.println("Numeros pares filtrados: " + evenList);
     }
 
     // 2
-    public static void transformarNombresAMayusculas() {
-        List<String> mayusculas = nombres.stream().map(String::toUpperCase).toList();
-        System.out.println("Lista de nombres en mayusculas: " + mayusculas);
+    public static void convertNamesToUppercase() {
+        List<String> uppercaseNamesList = names.stream()
+                                               .map(String::toUpperCase)
+                                               .toList();
+
+        System.out.println("Listado de nombres en mayusculas: " + uppercaseNamesList);
     }
 
     // 3
-    public static void ordenarListaNumeros() {
-        List<Integer> ordenados = numeros.stream().sorted().toList();
-        System.out.println("Lista de numeros ordenados: " + ordenados);
+    public static void sortNumbersList() {
+        List<Integer> sortedNumbers = numbers.stream()
+                                             .sorted()
+                                             .toList();
+
+        System.out.println("Lista de numeros ordenados de menor a mayor: " + sortedNumbers);
     }
 
     // 4
-    public static void contarMayoresQue(int x) {
-        int mayores = (int) numeros.stream().filter(n -> n > x).count();
-        System.out.println("La cantidad de numeros mayores a " + x + " es: " + mayores);
+    public static void countGreaterThan(int value) {
+        long count = numbers.stream()
+                            .filter(n -> n > value)
+                            .count();
+
+        System.out.println("La cantidad de numeros mayores a " + value + " es: " + count);
     }
 
     // 5
-    public static void obtenerPrimeros5Elementos() {
-        List<Integer> primeros5 = numeros.stream().limit(5).toList();
-        System.out.println("Los primeros 5 elementos de la lista son: " + primeros5);
+    public static void getFirstFiveElements() {
+        List<Integer> firstFive = numbers.stream()
+                                         .limit(5)
+                                         .toList();
+
+        System.out.println("Los primeros 5 elementos del listado de numeros son: " + firstFive);
     }
 
     // 6
-    public static void convertirPalabrasALongitud(){
-        List<Integer> longitudPalabras = palabras.stream().map(String::length).toList();
-        System.out.println("Lista con la longitud de cada palabra: " + longitudPalabras);
+    public static void convertWordsToLength() {
+        List<Integer> lengths = words.stream()
+                                     .map(String::length)
+                                     .toList();
+
+        System.out.println("Lista con las longitudes de cada palabra: " + lengths);
     }
 
     // 7
-    public static void concatenarNombres() {
-        String nombresConcatenados = nombres.stream().reduce((x, y) -> x + ", " + y).orElse("");
-        System.out.println("Nombres concatenados: " + nombresConcatenados);
+    public static void concatenateNames() {
+        String stringOfNames = names.stream()
+                                    .reduce((x, y) -> x + ", " + y)
+                                    .orElse("");
+        System.out.println("Nombres concatenados: " + stringOfNames);
     }
 
     // 8
-    public static void eliminarDuplicados() {
-        List<Integer> noRepetidos = numeros.stream().distinct().toList();
-        System.out.println("Lista de numeros no repetidos: " + noRepetidos);
+    public static void removeDuplicates() {
+        List<Integer> noDuplicates = numbers.stream()
+                                            .distinct()
+                                            .toList();
+
+        System.out.println("Lista de numeros sin duplicados: " + noDuplicates);
     }
 
     // 9
-    public static void obtenerTop3Numeros() {
-        List<Integer> top3 = numeros.stream().sorted(Comparator.reverseOrder()).limit(3).toList();
-//        List<Integer> top3 = numeros.stream().sorted(Comparator.reverseOrder()).limit(3).sorted().toList();
-        System.out.println("Los tres numeros mas grandes son: " + top3);
+    public static void getTop3Numbers() {
+        List<Integer> top3 = numbers.stream()
+                                    .sorted(Comparator.reverseOrder())
+                                    .limit(3)
+                                    .toList();
+
+        System.out.println("Los 3 numeros mas grandes son: " + top3);
     }
 
     // 10
-    public static void agruparPalabrasPorLongitud() {
-        Map<Integer, List<String>> agrupadas = palabras.stream().collect(Collectors.groupingBy(String::length));
-        System.out.println("Palabras agrupadas por longitud: " + agrupadas);
+    public static void groupWordsByLength() {
+        Map<Integer, List<String>> wordLength = words.stream()
+                                                     .collect(Collectors.groupingBy(String::length));
+
+        System.out.println("Palabras agrupadas por longitud: " + wordLength);
     }
 
     // 11
-    public static void productoDeNumeros() {
-        int producto = numeros.stream().reduce((x, y) -> x * y).orElse(0);
-        System.out.println("El producto de todos los numeros es: " + producto);
+    public static void productOfNumbers() {
+        Integer product = numbers.stream()
+                                 .reduce(1, (x, y) -> x * y);
+
+        System.out.println("El producto de todos los numeros es: " + product);
     }
 
     // 12
-    public static void nombreMasLargo() {
-        Optional<String> nombre = nombres.stream().reduce((n1, n2) -> n1.length() >= n2.length() ? n1 : n2);
-        nombre.ifPresent(n -> System.out.println("El nombre mas largo de la lista nombres es: " + n));
+    public static void longestName() {
+        String name = names.stream()
+                           .reduce((n1, n2) -> n1.length() >= n2.length() ? n1 : n2)
+                           .orElse("");
+
+        System.out.println("El nombre mas largo es: " + name);
     }
 
     // 13
-    public static void listaEnterosComoString() {
-        String cadena = numeros.stream().map(String::valueOf).collect(Collectors.joining("-"));
-        System.out.println("Cadena de numeros: " + cadena);
+    public static void listOfIntegersAsString() {
+        String stringNumbers = numbers.stream()
+                                      .map(String::valueOf)
+                                      .collect(Collectors.joining(" - "));
+
+        System.out.println("Numeros encadenados: " + stringNumbers);
     }
 
     // 14
-    public static void agruparParesEImpares() {
-        Map<Boolean, List<Integer>> agrupados = numeros.stream().collect(Collectors.partitioningBy(n -> n % 2 == 0));
-        System.out.println("Numeros pares e impares: " + agrupados);
-        System.out.println("\nNumeros pares: " + agrupados.get(true));
-        System.out.println("\nNumeros impares: " + agrupados.get(false));
+    public static void groupEvensAndOdds() {
+        Map<Boolean, List<Integer>> group = numbers.stream()
+                                                   .collect(Collectors.partitioningBy(x -> x % 2 == 0));
+
+        System.out.println("Lista de pares: " + group.get(true));
+        System.out.println("Lista de impares: " + group.get(false));
     }
 
     // 15
-    public static void sumaDeCuadradosImpares() {
-        Integer suma = numeros.stream().filter(n -> n % 2 != 0).map(n -> n * n).reduce(0, Integer::sum);
-        System.out.println("La suma de los cuadrados de los numeros impares es: " + suma);
+    public static void sumOfOddSquares() {
+        Integer sum = numbers.stream()
+                             .filter(n -> n % 2 != 0)
+                             .map(n -> n * n)
+                             .reduce(0, Integer::sum);
+
+        System.out.println("La suma de los cuadrados de los numeros impares es: " + sum);
     }
+
 }
