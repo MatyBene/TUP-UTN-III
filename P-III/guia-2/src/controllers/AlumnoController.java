@@ -2,6 +2,9 @@ package controllers;
 
 import models.Alumno;
 import models.DAO.AlumnoDAO;
+import models.DTO.AlumnoDTO;
+
+import java.util.List;
 
 public class AlumnoController{
 
@@ -13,6 +16,10 @@ public class AlumnoController{
 
     public void agregarAlumno(String nombre, String apellido, int edad, String email){
         alumnoDAO.insertarAlumno(new Alumno(nombre, apellido, edad, email));
+    }
+
+    public List<AlumnoDTO> listarAlumons(){
+        return alumnoDAO.listarAlumnos();
     }
 
 }

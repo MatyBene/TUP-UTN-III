@@ -22,6 +22,10 @@ public class Direccion{
         return id;
     }
 
+    public void setId(int id){
+        this.id = id;
+    }
+
     public String getCalle(){
         return calle;
     }
@@ -44,5 +48,10 @@ public class Direccion{
 
     public void setAlumnoId(int alumnoId){
         this.alumnoId = alumnoId;
+    }
+
+    @Override
+    public String toString(){
+        return "Direccion{" + "id=" + id + ", calle='" + calle + '\'' + ", altura=" + altura + ", alumnoId=" + alumnoId + '}';
     }
 }
