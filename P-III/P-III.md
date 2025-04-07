@@ -73,3 +73,25 @@ Ejercicio 5 – Sistema de turnos (por gravedad)
 
 ## Apunte de programacion funcional
 
+# 7/4/2025
+
+caracteristicas del protocolo http, verbos
+API intermediario entre dos piezas de software. restricciones
+API Rest tipo de api q se encarga de trabajar en aplicaciones web
+URL
+Endpoint parte de la url q le indica a q parte del sistema q quiero acceder
+uqe parametros se envian en una peticion
+una peticion se realiza generalmente en un navegador, tenemos que aclarar la accion que queremos hacer, headers, 
+postman probar los endpoints
+metodos http
+respuesta de peticiones api
+codigos de estado de la peticion
+apirestful es la aplicacion de los principios de aprirest
+versionado
+paginacion
+
+framework
+spring
+caracteristicas de springboot
+diferencia entre aplicacion monolitica y app basada en microservicios
+
