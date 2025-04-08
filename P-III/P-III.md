@@ -111,3 +111,10 @@ caracteristicas de springboot
 
 diferencia entre aplicacion monolitica y app basada en microservicios
 
+## SPRING INITIALIZR E INTRODUCCIÓN A LAS DEPENDENCIAS
+
+bean: objeto que es gestionado o administrado por el contenedor de spring, administra y guarda ciertas instancias de obj paraa que puedan ser inyectadas cuando se requieran y luego se destruyan
+
+diapositiva Componentes @Component, son anotaciones semanticas, definen un comportamiento especifico para una clase en particular
+
+
