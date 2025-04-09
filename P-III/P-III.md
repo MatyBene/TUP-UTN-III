@@ -117,4 +117,8 @@ bean: objeto que es gestionado o administrado por el contenedor de spring, admin
 
 diapositiva Componentes @Component, son anotaciones semanticas, definen un comportamiento especifico para una clase en particular
 
+# 09/04/2025
+
+## singleton
+
 
