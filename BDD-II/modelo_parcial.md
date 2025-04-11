@@ -19,7 +19,7 @@ optimizado para la comparacion de valores exactos y ordenamiento rapido.
 
 7. full text, esta optimizado para la busqueda de palabras claves en texto largos.
 
-
+```sql
 -- PARTE 2
 
 -- 2.1
@@ -55,13 +55,21 @@ delimiter ;
 create index idx_cliente on Ventas(cliente_id);
 
 -- 2.4
-create function antiguedad
+delimiter &&
+create function antiguedad_anios(fecha_contratacion date)
+return anios_antiguedad int
+-- deterministic o no deterministic????
+begin
+	return timestampdiff(year, fecha, curdate());
+end &&
+delimiter ;
 
+create view EmpleadosAntiguos as
+select nombre, salario, antiguedad_anios(fecha_contratacion) as antiguedad_en_anios
+from Empleados
+where antiguedad_en_anios > 5;
 
-
-
-
-
+```
 
 
 
