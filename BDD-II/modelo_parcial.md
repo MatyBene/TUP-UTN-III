@@ -8,16 +8,17 @@ un unico valor
 
 3. legibilidad 
 permite dividir una consulta compleja en varias consultas simples
-se puede reutilizar 
+se puede reutilizar
+reemplaza las subconsultas
 
-4. auditar la insercion como en el punto uno y/o modificar otra tabla.
+5. auditar la insercion como en el punto uno y/o modificar otra tabla.
 
-5. cumple la funcion de que las modificaciones a la vista cumplan con la condicion de la consulta select
+6. cumple la funcion de que las modificaciones a la vista cumplan con la condicion de la consulta select. que el stock sea positivo
 
-6. un b-treep, tomando que el producto_id es un int, este tipo de indice esta
-optimizado para la comparacion de valores exactos y ordenamiento rapido.
+7. un b-treep, tomando que el producto_id es un int, este tipo de indice esta
+optimizado para la comparacion de valores exactos y ordenamiento rapido. 
 
-7. full text, esta optimizado para la busqueda de palabras claves en texto largos.
+8. full text, esta optimizado para la busqueda de palabras claves en texto largos.
 
 ```sql
 -- PARTE 2
@@ -46,8 +47,8 @@ create trigger after_delete_auditoria_ventas
 after delete on Ventas
 for each row
 begin
-	insert into AuditoriaVentas(venta_id) 
-	values (old.venta_id);
+	insert into AuditoriaVentas(venta_id, fecha_borrado) 
+	values (old.venta_id, now());
 end &&
 delimiter ;
 
@@ -58,7 +59,7 @@ create index idx_cliente on Ventas(cliente_id);
 delimiter &&
 create function antiguedad_anios(fecha_contratacion date)
 return anios_antiguedad int
--- deterministic o no deterministic????
+deterministic
 begin
 	return timestampdiff(year, fecha, curdate());
 end &&
