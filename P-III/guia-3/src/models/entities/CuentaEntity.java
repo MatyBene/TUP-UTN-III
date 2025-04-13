@@ -1,4 +1,6 @@
-package models.entities.enums;
+package models.entities;
+
+import models.entities.enums.TipoCuenta;
 
 import java.time.LocalDateTime;
 
@@ -11,6 +13,15 @@ public class CuentaEntity{
     private LocalDateTime fechaCreacion;
 
     public CuentaEntity(){
+    }
+
+    public CuentaEntity(Integer usuarioId,
+                        TipoCuenta tipo,
+                        Double saldo){
+        this.usuarioId = usuarioId;
+        this.tipo = tipo;
+        this.saldo = saldo;
+        this.fechaCreacion = LocalDateTime.now();
     }
 
     public Integer getId(){
