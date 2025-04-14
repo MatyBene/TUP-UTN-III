@@ -13,6 +13,18 @@ public class CredencialEntity{
     public CredencialEntity(){
     }
 
+    public CredencialEntity(Integer id,
+                            Integer usuarioId,
+                            String username,
+                            String password,
+                            Permiso permiso){
+        this.id = id;
+        this.usuarioId = usuarioId;
+        this.username = username;
+        this.password = password;
+        this.permiso = permiso;
+    }
+
     public CredencialEntity(String username,
                             String password,
                             Permiso permiso){

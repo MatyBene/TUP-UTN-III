@@ -2,7 +2,7 @@ package models.repositories.impl;
 
 import config.DBConnection;
 import models.entities.CuentaEntity;
-import models.repositories.interfaces.IRepository;
+import models.repositories.interfaces.ICuentaRepository;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -10,7 +10,7 @@ import java.sql.SQLException;
 import java.util.List;
 import java.util.Optional;
 
-public class CuentaRepositoryImpl implements IRepository<CuentaEntity>{
+public class CuentaRepositoryImpl implements ICuentaRepository{
 
     private final Connection connection;
 

@@ -2,7 +2,7 @@ package models.repositories.impl;
 
 import config.DBConnection;
 import models.entities.UsuarioEntity;
-import models.repositories.interfaces.IRepository;
+import models.repositories.interfaces.IUsuarioRepository;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -12,7 +12,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
-public class UsuarioRepositoryImpl implements IRepository<UsuarioEntity>{
+public class UsuarioRepositoryImpl implements IUsuarioRepository{
 
     private final Connection connection;
 
@@ -63,6 +63,7 @@ public class UsuarioRepositoryImpl implements IRepository<UsuarioEntity>{
         return Optional.empty();
     }
 
+    @Override
     public Optional<UsuarioEntity> buscarXDni(String dni){
         return Optional.empty();
     }
@@ -77,6 +78,7 @@ public class UsuarioRepositoryImpl implements IRepository<UsuarioEntity>{
 
     }
 
+    @Override
     public Integer obtenerUltimoId(){
         String query = "select last_insert_id() as ultimo_id";
 
