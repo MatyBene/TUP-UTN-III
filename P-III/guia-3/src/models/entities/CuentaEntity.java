@@ -15,6 +15,18 @@ public class CuentaEntity{
     public CuentaEntity(){
     }
 
+    public CuentaEntity(Integer id,
+                        Integer usuarioId,
+                        TipoCuenta tipo,
+                        Double saldo,
+                        LocalDateTime fechaCreacion){
+        this.id = id;
+        this.usuarioId = usuarioId;
+        this.tipo = tipo;
+        this.saldo = saldo;
+        this.fechaCreacion = fechaCreacion;
+    }
+
     public CuentaEntity(Integer usuarioId,
                         TipoCuenta tipo,
                         Double saldo){
