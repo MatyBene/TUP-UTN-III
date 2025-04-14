@@ -60,22 +60,74 @@ public class UsuarioRepositoryImpl implements IUsuarioRepository{
 
     @Override
     public Optional<UsuarioEntity> buscarXId(Integer id){
+        String query = "select * from usuarios where id_usuario = ?";
+
+        try(PreparedStatement stmt = connection.prepareStatement(query); ResultSet rs = stmt.executeQuery()){
+            stmt.setInt(1, id);
+            if(rs.next()){
+                return Optional.of(new UsuarioEntity(rs.getInt("id_usuario"),
+                                                     rs.getString("nombre"),
+                                                     rs.getString("apellido"),
+                                                     rs.getString("dni"),
+                                                     rs.getString("email"),
+                                                     rs.getTimestamp("fecha_creacion")
+                                                       .toLocalDateTime()));
+            }
+        } catch(SQLException e){
+            e.printStackTrace();
+        }
+
         return Optional.empty();
     }
 
     @Override
     public Optional<UsuarioEntity> buscarXDni(String dni){
+        String query = "select * from usuarios where dni = ?";
+
+        try(PreparedStatement stmt = connection.prepareStatement(query); ResultSet rs = stmt.executeQuery()){
+            stmt.setString(1, dni);
+            if(rs.next()){
+                return Optional.of(new UsuarioEntity(rs.getInt("id_usuario"),
+                                                     rs.getString("nombre"),
+                                                     rs.getString("apellido"),
+                                                     rs.getString("dni"),
+                                                     rs.getString("email"),
+                                                     rs.getTimestamp("fecha_creacion")
+                                                       .toLocalDateTime()));
+            }
+        } catch(SQLException e){
+            e.printStackTrace();
+        }
+
         return Optional.empty();
     }
 
     @Override
     public void modificar(UsuarioEntity o){
+        String query = "update usuarios set nombre = ?, apellido = ?, dni = ?, email = ? where id_usuario = ?";
 
+        try(PreparedStatement stmt = connection.prepareStatement(query)){
+            stmt.setString(1, o.getNombre());
+            stmt.setString(2, o.getApellido());
+            stmt.setString(3, o.getDni());
+            stmt.setString(4, o.getEmail());
+            stmt.setInt(5, o.getId());
+            stmt.execute();
+        } catch(SQLException e){
+            e.printStackTrace();
+        }
     }
 
     @Override
     public void eliminar(UsuarioEntity o){
+        String query = "delete from usuarios where id_usuario = ?";
 
+        try(PreparedStatement stmt = connection.prepareStatement(query)){
+            stmt.setInt(1, o.getId());
+            stmt.execute();
+        } catch(SQLException e){
+            e.printStackTrace();
+        }
     }
 
     @Override
