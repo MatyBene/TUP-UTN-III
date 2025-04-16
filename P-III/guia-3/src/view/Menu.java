@@ -19,12 +19,12 @@ public class Menu{
 
     public static void inicioApp(){
         while(usuarioLogueado != null){
-            // menuPrincipal
+             menuPrincipal();
         }
-        MenuInicio();
+        menuInicio();
     }
 
-    private static void MenuInicio(){
+    private static void menuInicio(){
         printMsg("------ Banco ------");
         printMsg("1. Iniciar sesion.");
         printMsg("2. Registrarse.");
@@ -74,6 +74,17 @@ public class Menu{
         String password = scanner.nextLine();
 
 
+    }
+
+    private static void menuPrincipal(){
+        boolean salir = false;
+
+        while(!salir){
+            printMsg("------ Menu principal ------");
+            printMsg("1. Ver mis cuentas.");
+            printMsg("2. Ver mi saldo.");
+            printMsg("3. Depositar saldo en mi cuenta.");
+        }
     }
 
 }
