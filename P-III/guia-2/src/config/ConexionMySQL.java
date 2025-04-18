@@ -6,8 +6,14 @@ import java.sql.SQLException;
 
 public class ConexionMySQL {
     private static final String URL = "jdbc:mysql://localhost:3306/alumnos";
-    private static final String USUARIO = "admin";
-    private static final String PASSWORD = "1234";
+
+    // Desktop Windows
+    private static final String USUARIO = "root";
+    private static final String PASSWORD = "sasa";
+
+    // Desktop Ubuntu
+//    private static final String USUARIO = "admin";
+//    private static final String PASSWORD = "1234";
 
     private static ConexionMySQL instancia;
     private static Connection conexion;
