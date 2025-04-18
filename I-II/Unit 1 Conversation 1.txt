@@ -24,35 +24,136 @@ A: When you'll enjoy Mar del Plata a lot!
 # Conversation 2: Making small talk with a colleague
 A y B: Colleagues meeting for the fisrt time
 
-A: Hi! I don't think we've met. I'm Matias
-B: Hi Matias. I'm Tomas. Nice to meet you
+A: Hi! I don’t think we’ve met. I’m Carla.
+B: Hi Carla. I’m Ben. Nice to meet you.
 A: Is this your first time in Mar del Plata?
-B: 
-A: 
-B: 
-A: 
-B: 
-A: 
-B: 
-A: 
-B: 
-A: 
-B: 
-A: 
-B: 
-A: 
-B: 
-A: 
-B: 
-A: 
-B: 
+B: Yes, it is. I arrived yesterday.
+A: How was your trip?
+B: Long, but good. The flight was on time.
+A: That’s great. Did you try any local food?
+B: Not yet. Any suggestions?
+A: Yes! You must try empanadas and seafood.
+B: I love seafood. I’ll try it tonight.
+A: And don’t forget the dulce de leche desserts!
+B: Oh, I’ve heard about that. I’ll buy some.
+A: By the way, where are you from?
+B: I’m from Toronto. It’s cold there now.
+A: Here it’s spring. Perfect weather for a walk.
+B: I’ll go for a walk later. Thanks, Carla.
+A: You’re welcome. Enjoy your stay!
 
-# Conversation 3
-alargar mas, el de rh le preguntaria como se siente, que cualquier cosa lo puede contactar, programa una reunion futura
+# Conversation 3: First day on the job
+A: HR
+B: New employee
 
-# Conversation 4
-alargar mas metiendo mas pasos para resolver el problema
+A: Good morning! Welcome to the company, Jakob.
+B: Good morning, Laura. Thank you! I’m excited to start.
+A: I’m glad to hear that. How are you feeling today?
+B: A bit nervous, to be honest. Everything is new.
+A: That’s completely normal. If you need anything, you can contact me any time. I’m here to help.
+B: Thank you, that’s very reassuring.
+A: Let me explain your schedule for today. First, you’ll attend the induction session.
+B: Okay. Where is it?
+A: It’s in the meeting room, on the second floor. After that, you’ll meet your team and your manager.
+B: Great. I really want to meet everyone.
+A: You’ll also do the health and safety training. It’s important for all new staff.
+B: Of course. How long will that take?
+A: About one hour. Not too long.
+B: What happens after that?
+A: You’ll go to IT. They’ll help you set up your email and intranet access.
+B: Perfect. I want to get started as soon as possible.
+A: That’s great to hear. Also, we have team meetings every two weeks.
+B: Oh, really? What are they about?
+A: We discuss project updates and progress. It’s a good moment to share ideas.
+B: Sounds useful.
+A: Yes. And we can also schedule a short one-on-one meeting next week, just to check how you’re doing.
+B: I’d like that. It would help me a lot.
+A: Perfect. I’ll send you an invite. Again, feel free to email or call me any time.
+B: Thank you, Laura. I really appreciate your support.
+A: You’re very welcome. Good luck today!
 
-# C 5 alargar mucho mas
+# Conversation 4: IT problem at work
 
-# C 6 alargar y meter mas checking y clarifying
+A: Employee with tech issues
+B: IT technician
+
+A: Hi, Sue. I’m having trouble with my computer.
+B: What’s the problem?
+A: My email isn’t working. I can’t send or receive anything.
+B: Did you restart your computer?
+A: Yes, but it didn’t help.
+B: Okay. What’s your username?
+A: jakob.wright.
+B: Let me check… Your inbox is full. That’s why emails aren’t coming in.
+A: Oh, I see. What should I do?
+B: I’ll clean it up now. You don’t need to do anything.
+A: Thanks. Also, I can’t log into the intranet.
+B: What error do you get?
+A: “Invalid password”.
+B: Your account is probably locked. I’ll reset it.
+A: So I just use the new password and change it later?
+B: Exactly. The system will ask you to create a new one.
+A: Got it. Thanks for your help.
+B: No problem. Call me again if anything else comes up.
+A: I will. Thanks again, Sue!
+
+# C 5: Starting a Meeting
+
+A: Meeting chairperson
+B: Participant
+
+A: Good morning, everyone. Thanks for coming. Let’s start the meeting.
+B: Good morning.
+A: First, I’d like to welcome Paula, our new team member from marketing.
+B: Hi Paula, welcome!
+A: John will take the minutes, and Ana will keep time.
+B: Sounds good.
+A: You all received the agenda by email, right?
+B: Yes, I have it here.
+A: We’ll cover four points: product launch, advertising strategy, budget, and any other business.
+B: Got it.
+A: The goal is to align our plans for next month’s product launch.
+B: Do we have a date yet?
+A: Not yet, we’ll discuss it in the first item.
+B: Okay.
+A: For the second point, I’d like to hear your campaign ideas.
+B: I’ve prepared a few.
+A: Great. Any questions before we begin?
+B: No, all clear.
+A: Perfect. Let’s start with the product launch timeline.
+A: Let’s move on to the last item — any other business.
+B: Just a quick question: is next week’s deadline still on?
+A: Yes, we’ll confirm the final date by Friday.
+B: Alright, thanks.
+A: To sum up: the launch is planned for the first week of June, marketing proposals are due Monday, and we’ll review the budget on Tuesday.
+B: Got it, thank you.
+A: Thanks, everyone. Our next meeting is in two weeks, same time.
+B: See you then!
+A: Meeting closed. Have a great day.
+
+# C 6: Clarifying during a meeting
+
+A: Presenter
+B: Listener
+
+A: We plan to launch the campaign next quarter.
+B: Sorry, just to clarify—by "next quarter," do you mean April to June?
+A: Yes, exactly—Q2, from April through June.
+B: Got it, thanks. And do we have a specific launch date in mind?
+A: We’re aiming for the second week of April, but it’s not final yet.
+B: Okay, so still tentative. Will there be a press release around that time?
+A: Yes, we're planning a press release in early April, just before the launch.
+B: Just to double-check—who’s handling the press release?
+A: The communications team is in charge, but they’re coordinating with marketing.
+B: Great. And what about the budget? Is it already confirmed?
+A: Not yet. We’re still waiting for approval from finance.
+B: When do you expect that confirmation?
+A: We should have it by the end of next week.
+B: Alright, I’ll make a note of that.
+B: One more thing—will the website be ready in time for the launch?
+A: Yes, the web team is already working on the updates. The new pages should go live a few days before launch.
+B: Just to be clear, does that include the landing page for the campaign?
+A: Yes, that’s part of it. The landing page and the campaign banner are both in development.
+B: Perfect, sounds like everything is coming together. Thanks for the clarification.
+A: No problem—happy to help. Let me know if anything else needs clearing up.
+B: Will do. Thanks again!
