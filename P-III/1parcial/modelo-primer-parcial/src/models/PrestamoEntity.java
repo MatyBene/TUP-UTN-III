@@ -21,6 +21,11 @@ public class PrestamoEntity {
         this.fechaDevolucion = fechaDevolucion;
     }
 
+    public PrestamoEntity(Integer libroId, Integer usuarioId) {
+        this.libroId = libroId;
+        this.usuarioId = usuarioId;
+    }
+
     public Integer getId() {
         return id;
     }
@@ -59,5 +64,16 @@ public class PrestamoEntity {
 
     public void setFechaDevolucion(Date fechaDevolucion) {
         this.fechaDevolucion = fechaDevolucion;
+    }
+
+    @Override
+    public String toString() {
+        return "\nPrestamoEntity{" +
+                "id=" + id +
+                ", libroId=" + libroId +
+                ", usuarioId=" + usuarioId +
+                ", fechaPrestamo=" + fechaPrestamo +
+                ", fechaDevolucion=" + fechaDevolucion +
+                '}';
     }
 }

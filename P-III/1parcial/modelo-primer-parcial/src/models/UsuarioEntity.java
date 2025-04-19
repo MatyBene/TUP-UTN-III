@@ -15,6 +15,11 @@ public class UsuarioEntity {
         this.email = email;
     }
 
+    public UsuarioEntity(String nombre, String email) {
+        this.nombre = nombre;
+        this.email = email;
+    }
+
     public Integer getId() {
         return id;
     }
@@ -37,5 +42,14 @@ public class UsuarioEntity {
 
     public void setEmail(String email) {
         this.email = email;
+    }
+
+    @Override
+    public String toString() {
+        return "\nUsuarioEntity{" +
+                "id=" + id +
+                ", nombre='" + nombre + '\'' +
+                ", email='" + email + '\'' +
+                '}';
     }
 }

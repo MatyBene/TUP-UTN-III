@@ -17,7 +17,7 @@ public class DBConnection{
 
     // Instancia única
     private static DBConnection instance;
-    private Connection connection;
+    private static Connection connection;
 
     // Constructor privado para inicializar la conexión
     private DBConnection(){
@@ -43,7 +43,7 @@ public class DBConnection{
     }
 
     // Método para cerrar la conexión
-    public void cerrarConexion(){
+    public static void cerrarConexion(){
         if(connection != null){
             try{
                 connection.close();

@@ -84,11 +84,11 @@ public class UsuarioRepository implements IUsuarioRepository {
     }
 
     @Override
-    public void eliminar(UsuarioEntity o) {
+    public void eliminar(Integer id) {
         String query = "delete from usuarios where id = ?";
 
         try(PreparedStatement stmt = connection.prepareStatement(query)){
-            stmt.setInt(1, o.getId());
+            stmt.setInt(1, id);
             stmt.execute();
         } catch(SQLException e){
             e.printStackTrace();

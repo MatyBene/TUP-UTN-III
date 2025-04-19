@@ -9,6 +9,6 @@ public interface IRepository<T> {
     List<T> listar();
     Optional<T> buscarXId(Integer id);
     void modificar(T o);
-    void eliminar(T o);
+    void eliminar(Integer id);
 
 }

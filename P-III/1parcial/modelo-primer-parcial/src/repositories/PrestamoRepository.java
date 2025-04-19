@@ -18,12 +18,11 @@ public class PrestamoRepository implements IPrestamoRepository {
 
     @Override
     public void guardar(PrestamoEntity o) {
-        String query = "insert into prestamos (libro_id, usuario_id, fecha_prestamo) values (?, ?, ?)";
+        String query = "insert into prestamos (libro_id, usuario_id) values (?, ?)";
 
         try (PreparedStatement stmt = connection.prepareStatement(query)) {
             stmt.setInt(1, o.getLibroId());
             stmt.setInt(2, o.getUsuarioId());
-            stmt.setDate(3, (Date) o.getFechaPrestamo());
             stmt.execute();
         } catch (SQLException e) {
             e.printStackTrace();
@@ -54,16 +53,20 @@ public class PrestamoRepository implements IPrestamoRepository {
     public Optional<PrestamoEntity> buscarXId(Integer id) {
         String query = "select * from prestamos where id = ?";
 
-        try(PreparedStatement stmt = connection.prepareStatement(query); ResultSet rs = stmt.executeQuery()){
+        try (PreparedStatement stmt = connection.prepareStatement(query)) {
             stmt.setInt(1, id);
-            if(rs.next()){
-                return Optional.of(new PrestamoEntity(rs.getInt("id"),
-                        rs.getInt("libro_id"),
-                        rs.getInt("usuario_id"),
-                        rs.getDate("fecha_prestamo"),
-                        rs.getDate("fecha_devolucion")));
+            try (ResultSet rs = stmt.executeQuery()) {
+
+                if (rs.next()) {
+                    return Optional.of(new PrestamoEntity(rs.getInt("id"),
+                            rs.getInt("libro_id"),
+                            rs.getInt("usuario_id"),
+                            rs.getDate("fecha_prestamo"),
+                            rs.getDate("fecha_devolucion")));
+                }
             }
-        } catch(SQLException e){
+
+        } catch (SQLException e) {
             e.printStackTrace();
         }
 
@@ -72,27 +75,28 @@ public class PrestamoRepository implements IPrestamoRepository {
 
     @Override
     public void modificar(PrestamoEntity o) {
-        String query = "update prestamos set libro_id = ?, usuario_id = ?, fecha_prestamo = ? where id = ?";
+        String query = "update prestamos set libro_id = ?, usuario_id = ?, fecha_prestamo = ?, fecha_devolucion = ? where id = ?";
 
-        try(PreparedStatement stmt = connection.prepareStatement(query)){
+        try (PreparedStatement stmt = connection.prepareStatement(query)) {
             stmt.setInt(1, o.getLibroId());
             stmt.setInt(2, o.getUsuarioId());
-            stmt.setDate(3, (Date) o.getFechaPrestamo());
-            stmt.setInt(4, o.getId());
+            stmt.setDate(3, new java.sql.Date(o.getFechaPrestamo().getTime()));
+            stmt.setDate(4, new java.sql.Date(o.getFechaDevolucion().getTime()));
+            stmt.setInt(5, o.getId());
             stmt.execute();
-        } catch(SQLException e){
+        } catch (SQLException e) {
             e.printStackTrace();
         }
     }
 
     @Override
-    public void eliminar(PrestamoEntity o) {
+    public void eliminar(Integer id) {
         String query = "delete from prestamos where id = ?";
 
-        try(PreparedStatement stmt = connection.prepareStatement(query)){
-            stmt.setInt(1, o.getId());
+        try (PreparedStatement stmt = connection.prepareStatement(query)) {
+            stmt.setInt(1, id);
             stmt.execute();
-        } catch(SQLException e){
+        } catch (SQLException e) {
             e.printStackTrace();
         }
     }
