@@ -109,4 +109,9 @@ public class UsuarioEntity{
     public void setCuentas(List<CuentaEntity> cuentas){
         this.cuentas = cuentas;
     }
+
+    @Override
+    public String toString(){
+        return "\nUsuarioEntity{" + "id=" + id + ", nombre='" + nombre + '\'' + ", apellido='" + apellido + '\'' + ", dni='" + dni + '\'' + ", email='" + email + '\'' + ", fechaCreacion=" + fechaCreacion + ", credencial=" + credencial + ", cuentas=" + cuentas + '}';
+    }
 }

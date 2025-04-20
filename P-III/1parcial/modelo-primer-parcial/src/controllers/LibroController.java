@@ -3,13 +3,14 @@ package controllers;
 import models.LibroEntity;
 import services.LibroService;
 
+import java.util.List;
 import java.util.Optional;
 
-public class LibroController {
+public class LibroController{
 
     private final LibroService libroService;
 
-    public LibroController() {
+    public LibroController(){
         this.libroService = new LibroService();
     }
 
@@ -21,4 +22,11 @@ public class LibroController {
         libroService.reducirStock(id);
     }
 
+    public int totalLibrosDisponibles(){
+        return libroService.librosDisponibles();
+    }
+
+    public List<LibroEntity> listarLibros(){
+        return libroService.libros();
+    }
 }

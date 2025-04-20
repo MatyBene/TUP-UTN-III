@@ -79,6 +79,27 @@ public class CredencialRepositoryImpl implements ICredencialRepository{
         return Optional.empty();
     }
 
+    public Optional<CredencialEntity> buscarXUsername(String username){
+        String query = "select * from credenciales where username = ?";
+
+        try(PreparedStatement stmt = connection.prepareStatement(query)){
+            stmt.setString(1, username);
+            try(ResultSet rs = stmt.executeQuery()){
+                if(rs.next()){
+                    return Optional.of(new CredencialEntity(rs.getInt("id_credencial"),
+                                                            rs.getInt("id_usuario"),
+                                                            rs.getString("username"),
+                                                            rs.getString("password"),
+                                                            Permiso.valueOf(rs.getString("permiso"))));
+                }
+            }
+        } catch(SQLException e){
+            e.printStackTrace();
+        }
+
+        return Optional.empty();
+    }
+
     @Override
     public void modificar(CredencialEntity o){
         String query = "update credenciales set username = ?, password = ?, permiso = ? where id_credencial = ?";

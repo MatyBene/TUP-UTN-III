@@ -72,4 +72,9 @@ public class CredencialEntity{
     public void setPermiso(Permiso permiso){
         this.permiso = permiso;
     }
+
+    @Override
+    public String toString(){
+        return "\nCredencialEntity{" + "id=" + id + ", usuarioId=" + usuarioId + ", username='" + username + '\'' + ", password='" + password + '\'' + ", permiso=" + permiso + '}';
+    }
 }

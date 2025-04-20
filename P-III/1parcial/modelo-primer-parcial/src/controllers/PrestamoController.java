@@ -5,11 +5,11 @@ import services.PrestamoService;
 
 import java.util.List;
 
-public class PrestamoController {
+public class PrestamoController{
 
     private final PrestamoService prestamoService;
 
-    public PrestamoController() {
+    public PrestamoController(){
         this.prestamoService = new PrestamoService();
     }
 

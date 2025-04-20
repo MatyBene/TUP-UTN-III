@@ -2,7 +2,7 @@ package utils;
 
 import java.util.List;
 
-public class DisplayManager {
+public class DisplayManager{
 
     public static void printMsg(String msg){
         System.out.println(msg);

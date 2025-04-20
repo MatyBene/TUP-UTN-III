@@ -1,55 +1,54 @@
 package models;
 
-public class UsuarioEntity {
+public class UsuarioEntity{
 
     private Integer id;
     private String nombre;
     private String email;
 
-    public UsuarioEntity() {
+    public UsuarioEntity(){
     }
 
-    public UsuarioEntity(Integer id, String nombre, String email) {
+    public UsuarioEntity(Integer id,
+                         String nombre,
+                         String email){
         this.id = id;
         this.nombre = nombre;
         this.email = email;
     }
 
-    public UsuarioEntity(String nombre, String email) {
+    public UsuarioEntity(String nombre,
+                         String email){
         this.nombre = nombre;
         this.email = email;
     }
 
-    public Integer getId() {
+    public Integer getId(){
         return id;
     }
 
-    public void setId(Integer id) {
+    public void setId(Integer id){
         this.id = id;
     }
 
-    public String getNombre() {
+    public String getNombre(){
         return nombre;
     }
 
-    public void setNombre(String nombre) {
+    public void setNombre(String nombre){
         this.nombre = nombre;
     }
 
-    public String getEmail() {
+    public String getEmail(){
         return email;
     }
 
-    public void setEmail(String email) {
+    public void setEmail(String email){
         this.email = email;
     }
 
     @Override
-    public String toString() {
-        return "\nUsuarioEntity{" +
-                "id=" + id +
-                ", nombre='" + nombre + '\'' +
-                ", email='" + email + '\'' +
-                '}';
+    public String toString(){
+        return "\nUsuarioEntity{" + "id=" + id + ", nombre='" + nombre + '\'' + ", email='" + email + '\'' + '}';
     }
 }

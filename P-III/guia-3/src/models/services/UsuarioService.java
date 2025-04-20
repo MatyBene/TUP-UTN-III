@@ -1,6 +1,7 @@
 package models.services;
 
 
+import models.entities.CredencialEntity;
 import models.entities.CuentaEntity;
 import models.entities.UsuarioEntity;
 import models.entities.enums.TipoCuenta;
@@ -38,14 +39,27 @@ public class UsuarioService{
 
     }
 
+    public Optional<UsuarioEntity> loguear(String username,
+                                           String password){
+        Optional<CredencialEntity> credencial = credencialRepository.buscarXUsername(username);
+
+        if(credencial.isPresent() && credencial.get().getPassword().equals(password)){
+            Optional<UsuarioEntity> usuario = usuarioRepository.buscarXId(credencial.get().getUsuarioId());
+            if(usuario.isPresent()){
+                usuario.get().setCredencial(credencial.get());
+                usuario.get().setCuentas(cuentaRepository.);
+            }
+        }
+
+    }
+
     public Optional<UsuarioEntity> obtenerUsuarioXDni(String dni){
         List<UsuarioEntity> usuarios = usuarioRepository.listar();
 
-        Optional<UsuarioEntity> usuario = usuarios.stream()
-                                                  .filter(u -> u.getDni()
-                                                                .equals(dni))
-                                                  .findFirst();
+        return usuarios.stream()
+                       .filter(u -> u.getDni()
+                                     .equals(dni))
+                       .findFirst();
 
-        return Optional.ofNullable(usuario ? usuario : null);
     }
 }

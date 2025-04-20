@@ -2,7 +2,7 @@ package models;
 
 import java.util.Date;
 
-public class PrestamoEntity {
+public class PrestamoEntity{
 
     private Integer id;
     private Integer libroId;
@@ -10,10 +10,14 @@ public class PrestamoEntity {
     private Date fechaPrestamo;
     private Date fechaDevolucion;
 
-    public PrestamoEntity() {
+    public PrestamoEntity(){
     }
 
-    public PrestamoEntity(Integer id, Integer libroId, Integer usuarioId, Date fechaPrestamo, Date fechaDevolucion) {
+    public PrestamoEntity(Integer id,
+                          Integer libroId,
+                          Integer usuarioId,
+                          Date fechaPrestamo,
+                          Date fechaDevolucion){
         this.id = id;
         this.libroId = libroId;
         this.usuarioId = usuarioId;
@@ -21,59 +25,54 @@ public class PrestamoEntity {
         this.fechaDevolucion = fechaDevolucion;
     }
 
-    public PrestamoEntity(Integer libroId, Integer usuarioId) {
+    public PrestamoEntity(Integer libroId,
+                          Integer usuarioId){
         this.libroId = libroId;
         this.usuarioId = usuarioId;
     }
 
-    public Integer getId() {
+    public Integer getId(){
         return id;
     }
 
-    public void setId(Integer id) {
+    public void setId(Integer id){
         this.id = id;
     }
 
-    public Integer getLibroId() {
+    public Integer getLibroId(){
         return libroId;
     }
 
-    public void setLibroId(Integer libroId) {
+    public void setLibroId(Integer libroId){
         this.libroId = libroId;
     }
 
-    public Integer getUsuarioId() {
+    public Integer getUsuarioId(){
         return usuarioId;
     }
 
-    public void setUsuarioId(Integer usuarioId) {
+    public void setUsuarioId(Integer usuarioId){
         this.usuarioId = usuarioId;
     }
 
-    public Date getFechaPrestamo() {
+    public Date getFechaPrestamo(){
         return fechaPrestamo;
     }
 
-    public void setFechaPrestamo(Date fechaPrestamo) {
+    public void setFechaPrestamo(Date fechaPrestamo){
         this.fechaPrestamo = fechaPrestamo;
     }
 
-    public Date getFechaDevolucion() {
+    public Date getFechaDevolucion(){
         return fechaDevolucion;
     }
 
-    public void setFechaDevolucion(Date fechaDevolucion) {
+    public void setFechaDevolucion(Date fechaDevolucion){
         this.fechaDevolucion = fechaDevolucion;
     }
 
     @Override
-    public String toString() {
-        return "\nPrestamoEntity{" +
-                "id=" + id +
-                ", libroId=" + libroId +
-                ", usuarioId=" + usuarioId +
-                ", fechaPrestamo=" + fechaPrestamo +
-                ", fechaDevolucion=" + fechaDevolucion +
-                '}';
+    public String toString(){
+        return "\nPrestamoEntity{" + "id=" + id + ", libroId=" + libroId + ", usuarioId=" + usuarioId + ", fechaPrestamo=" + fechaPrestamo + ", fechaDevolucion=" + fechaDevolucion + '}';
     }
 }

@@ -4,12 +4,13 @@ import models.UsuarioEntity;
 import services.UsuarioService;
 
 import java.util.List;
+import java.util.Optional;
 
-public class UsuarioController {
+public class UsuarioController{
 
     private final UsuarioService usuarioService;
 
-    public UsuarioController() {
+    public UsuarioController(){
         this.usuarioService = new UsuarioService();
     }
 
@@ -31,5 +32,9 @@ public class UsuarioController {
 
     public List<UsuarioEntity> listarUsuarios(){
         return usuarioService.usuarios();
+    }
+
+    public Optional<UsuarioEntity> usuarioConMayorNumeroDePrestamosHistorico(){
+        return usuarioService.usuarioConMasPrestamos();
     }
 }

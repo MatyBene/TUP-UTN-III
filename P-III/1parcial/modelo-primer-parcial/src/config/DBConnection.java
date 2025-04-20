@@ -8,12 +8,12 @@ public class DBConnection{
     // URL de la base de datos
     private static final String URL = "jdbc:mysql://localhost:3306/biblioteca";
     //OS Windows
-    private static final String USUARIO = "root";
-    private static final String PASSWORD = "sasa";
+//    private static final String USUARIO = "root";
+//    private static final String PASSWORD = "sasa";
 
     // OS Ubuntu
-//    private static final String USUARIO = "admin";
-//    private static final String PASSWORD = "1234";
+    private static final String USUARIO = "admin";
+    private static final String PASSWORD = "1234";
 
     // Instancia única
     private static DBConnection instance;

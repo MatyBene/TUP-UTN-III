@@ -75,4 +75,9 @@ public class CuentaEntity{
     public void setFechaCreacion(LocalDateTime fechaCreacion){
         this.fechaCreacion = fechaCreacion;
     }
+
+    @Override
+    public String toString(){
+        return "\nCuentaEntity{" + "id=" + id + ", usuarioId=" + usuarioId + ", tipo=" + tipo + ", saldo=" + saldo + ", fechaCreacion=" + fechaCreacion + '}';
+    }
 }

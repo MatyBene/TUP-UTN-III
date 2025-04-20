@@ -1,6 +1,6 @@
 package models;
 
-public class LibroEntity {
+public class LibroEntity{
 
     private Integer id;
     private String titulo;
@@ -8,10 +8,14 @@ public class LibroEntity {
     private Integer anioPublicacion;
     private Integer stock;
 
-    public LibroEntity() {
+    public LibroEntity(){
     }
 
-    public LibroEntity(Integer id, String titulo, String autor, Integer anioPublicacion, Integer stock) {
+    public LibroEntity(Integer id,
+                       String titulo,
+                       String autor,
+                       Integer anioPublicacion,
+                       Integer stock){
         this.id = id;
         this.titulo = titulo;
         this.autor = autor;
@@ -19,54 +23,48 @@ public class LibroEntity {
         this.stock = stock;
     }
 
-    public Integer getId() {
+    public Integer getId(){
         return id;
     }
 
-    public void setId(Integer id) {
+    public void setId(Integer id){
         this.id = id;
     }
 
-    public String getTitulo() {
+    public String getTitulo(){
         return titulo;
     }
 
-    public void setTitulo(String titulo) {
+    public void setTitulo(String titulo){
         this.titulo = titulo;
     }
 
-    public String getAutor() {
+    public String getAutor(){
         return autor;
     }
 
-    public void setAutor(String autor) {
+    public void setAutor(String autor){
         this.autor = autor;
     }
 
-    public Integer getAnioPublicacion() {
+    public Integer getAnioPublicacion(){
         return anioPublicacion;
     }
 
-    public void setAnioPublicacion(Integer anioPublicacion) {
+    public void setAnioPublicacion(Integer anioPublicacion){
         this.anioPublicacion = anioPublicacion;
     }
 
-    public Integer getStock() {
+    public Integer getStock(){
         return stock;
     }
 
-    public void setStock(Integer stock) {
+    public void setStock(Integer stock){
         this.stock = stock;
     }
 
     @Override
-    public String toString() {
-        return "LibroEntity{" +
-                "id=" + id +
-                ", titulo='" + titulo + '\'' +
-                ", autor='" + autor + '\'' +
-                ", anioPublicacion=" + anioPublicacion +
-                ", stock=" + stock +
-                '}';
+    public String toString(){
+        return "LibroEntity{" + "id=" + id + ", titulo='" + titulo + '\'' + ", autor='" + autor + '\'' + ", anioPublicacion=" + anioPublicacion + ", stock=" + stock + '}';
     }
 }

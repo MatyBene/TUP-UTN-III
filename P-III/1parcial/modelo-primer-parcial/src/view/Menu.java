@@ -15,7 +15,7 @@ import java.util.Scanner;
 import static utils.DisplayManager.printList;
 import static utils.DisplayManager.printMsg;
 
-public class Menu {
+public class Menu{
 
     public static void menuPrincipal(){
         Scanner scanner = new Scanner(System.in);
@@ -25,7 +25,7 @@ public class Menu {
 
         int opcion;
 
-        do{
+        do {
             mostrarMenu();
             try{
                 opcion = scanner.nextInt();
@@ -94,19 +94,30 @@ public class Menu {
                     }
                 }
                 case 9 -> {
-//                    Integer librosDisponibles = libroController.totalLibrosDisponibles();
-//                    printMsg("La cantidad de libros disponibles es: " + librosDisponibles);
+                    int librosDisponibles = libroController.totalLibrosDisponibles();
+                    printMsg("La cantidad de libros disponibles es: " + librosDisponibles);
                 }
-                case 10 -> {}
-                case 11 -> {}
-                case 12 -> {}
+                case 10 -> {
+                    printList(libroController.listarLibros());
+                }
+                case 11 -> {
+                    Optional<UsuarioEntity> usuario = usuarioController.usuarioConMayorNumeroDePrestamosHistorico();
+
+                    if(usuario.isPresent()){
+                        System.out.println(usuario);
+                    } else {
+                        printMsg("Todavia ningun usuario solicito un prestamo");
+                    }
+                }
+                case 12 -> {
+                }
                 case 13 -> {
                     printList(usuarioController.listarUsuarios());
                 }
-                case 0 ->  printMsg("Saliendo de la biblioteca");
-                default ->  printMsg("Opcion no valida, intente de nuevo");
+                case 0 -> printMsg("Saliendo de la biblioteca");
+                default -> printMsg("Opcion no valida, intente de nuevo");
             }
-        }while(opcion != 0);
+        } while(opcion != 0);
 
         scanner.close();
         DBConnection.cerrarConexion();

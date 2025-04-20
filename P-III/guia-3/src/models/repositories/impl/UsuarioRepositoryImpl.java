@@ -84,16 +84,19 @@ public class UsuarioRepositoryImpl implements IUsuarioRepository{
     public Optional<UsuarioEntity> buscarXDni(String dni){
         String query = "select * from usuarios where dni = ?";
 
-        try(PreparedStatement stmt = connection.prepareStatement(query); ResultSet rs = stmt.executeQuery()){
+        try(PreparedStatement stmt = connection.prepareStatement(query)){
             stmt.setString(1, dni);
-            if(rs.next()){
-                return Optional.of(new UsuarioEntity(rs.getInt("id_usuario"),
-                                                     rs.getString("nombre"),
-                                                     rs.getString("apellido"),
-                                                     rs.getString("dni"),
-                                                     rs.getString("email"),
-                                                     rs.getTimestamp("fecha_creacion")
-                                                       .toLocalDateTime()));
+            try(ResultSet rs = stmt.executeQuery()){
+
+                if(rs.next()){
+                    return Optional.of(new UsuarioEntity(rs.getInt("id_usuario"),
+                                                         rs.getString("nombre"),
+                                                         rs.getString("apellido"),
+                                                         rs.getString("dni"),
+                                                         rs.getString("email"),
+                                                         rs.getTimestamp("fecha_creacion")
+                                                           .toLocalDateTime()));
+                }
             }
         } catch(SQLException e){
             e.printStackTrace();
