@@ -1,8 +1,8 @@
-package repositories;
+package model.repositories;
 
 import config.DBConnection;
-import models.UsuarioEntity;
-import repositories.interfaces.IUsuarioRepository;
+import model.entities.xxxEntity;
+import model.repositories.interfaces.IxxxRepository;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -12,22 +12,21 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
-public class UsuarioRepository implements IUsuarioRepository{
+public class xxxRepository implements IxxxRepository{
 
     private final Connection connection;
 
-    public UsuarioRepository(){
+    public xxxRepository(){
         this.connection = DBConnection.getInstance()
                                       .getConnection();
     }
 
     @Override
-    public void guardar(UsuarioEntity o){
-        String query = "insert into usuarios (nombre, email) values (?, ?)";
+    public void guardar(xxxEntity o){
+        String query = "insert into xxx (, ) values (?, ?)";
 
         try(PreparedStatement stmt = connection.prepareStatement(query)){
             stmt.setString(1, o.getNombre());
-            stmt.setString(2, o.getEmail());
             stmt.execute();
         } catch(SQLException e){
             e.printStackTrace();
@@ -35,32 +34,30 @@ public class UsuarioRepository implements IUsuarioRepository{
     }
 
     @Override
-    public List<UsuarioEntity> listar(){
-        List<UsuarioEntity> usuarios = new ArrayList<>();
-        String query = "select * from usuarios";
+    public List<xxxEntity> listar(){
+        List<xxxEntity> xxx = new ArrayList<>();
+        String query = "select * from xxx";
 
         try(PreparedStatement stmt = connection.prepareStatement(query); ResultSet rs = stmt.executeQuery()){
             while(rs.next()){
-                usuarios.add(new UsuarioEntity(rs.getInt("id"), rs.getString("nombre"), rs.getString("email")));
+                xxx.add(new xxxEntity(rs.getInt("id"), rs.getString("nombre"), rs.getString("email")));
             }
         } catch(SQLException e){
             e.printStackTrace();
         }
 
-        return usuarios;
+        return xxx;
     }
 
     @Override
-    public Optional<UsuarioEntity> buscarXId(Integer id){
-        String query = "select * from usuarios where id = ?";
+    public Optional<xxxEntity> buscarPorId(int id){
+        String query = "select * from xxx where id = ?";
 
         try(PreparedStatement stmt = connection.prepareStatement(query)){
             stmt.setInt(1, id);
             try(ResultSet rs = stmt.executeQuery()){
                 if(rs.next()){
-                    return Optional.of(new UsuarioEntity(rs.getInt("id"),
-                                                         rs.getString("nombre"),
-                                                         rs.getString("email")));
+                    return Optional.of(new xxxEntity(rs.getInt("id"), rs.getString("nombre"), rs.getString("email")));
                 }
             }
         } catch(SQLException e){
@@ -71,13 +68,11 @@ public class UsuarioRepository implements IUsuarioRepository{
     }
 
     @Override
-    public void modificar(UsuarioEntity o){
-        String query = "update usuarios set nombre = ?, email = ? where id = ?";
+    public void modificar(xxxEntity o){
+        String query = "update xxx set nombre = ?, email = ? where id = ?";
 
         try(PreparedStatement stmt = connection.prepareStatement(query)){
             stmt.setString(1, o.getNombre());
-            stmt.setString(2, o.getEmail());
-            stmt.setInt(3, o.getId());
             stmt.execute();
         } catch(SQLException e){
             e.printStackTrace();
@@ -85,8 +80,8 @@ public class UsuarioRepository implements IUsuarioRepository{
     }
 
     @Override
-    public void eliminar(Integer id){
-        String query = "delete from usuarios where id = ?";
+    public void eliminar(int id){
+        String query = "delete from xxx where id = ?";
 
         try(PreparedStatement stmt = connection.prepareStatement(query)){
             stmt.setInt(1, id);

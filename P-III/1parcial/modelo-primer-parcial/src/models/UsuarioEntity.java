@@ -48,7 +48,10 @@ public class UsuarioEntity{
     }
 
     @Override
-    public String toString(){
-        return "\nUsuarioEntity{" + "id=" + id + ", nombre='" + nombre + '\'' + ", email='" + email + '\'' + '}';
+    public String toString() {
+        return "UsuarioEntity:\n" +
+               "  ID: " + id + "\n" +
+               "  Nombre: " + nombre + "\n" +
+               "  Email: " + email + "\n";
     }
 }

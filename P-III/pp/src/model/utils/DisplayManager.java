@@ -1,10 +1,8 @@
-package utils;
-
-import models.UsuarioEntity;
+package model.utils;
 
 import java.util.List;
 
-public class DisplayManager<T>{
+public class DisplayManager{
 
     public static void printMsg(String msg){
         System.out.println(msg);
@@ -16,10 +14,6 @@ public class DisplayManager<T>{
 
     public static void printList(List<?> list){
         list.forEach(System.out::println);
-    }
-
-    public static void printUsuario(UsuarioEntity usuario){
-        System.out.println(usuario);
     }
 
 }
