@@ -1,6 +1,6 @@
 <mxfile host="Electron" agent="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/26.2.15 Chrome/134.0.6998.205 Electron/35.2.1 Safari/537.36" version="26.2.15">
   <diagram name="Página-1" id="AsFeyqHClAEZPl0sTSIK">
-    <mxGraphModel dx="1346" dy="981" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="1380" dy="1002" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -379,19 +379,24 @@
             <mxPoint x="-6" y="-8" as="offset" />
           </mxGeometry>
         </mxCell>
+        <mxCell id="KOnt1ZvHI99cW2ofQKHx-101" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;endArrow=none;startFill=0;" edge="1" parent="1" target="KOnt1ZvHI99cW2ofQKHx-99">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="940" y="1120" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
         <mxCell id="KOnt1ZvHI99cW2ofQKHx-73" value="ADMINISTRADOR" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" vertex="1" parent="1">
           <mxGeometry x="890" y="1101" width="30" height="60" as="geometry" />
         </mxCell>
         <mxCell id="KOnt1ZvHI99cW2ofQKHx-99" value="Listando&lt;br&gt;socios" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="1060" y="1360" width="120" height="80" as="geometry" />
+          <mxGeometry x="1060" y="980" width="120" height="80" as="geometry" />
         </mxCell>
         <mxCell id="KOnt1ZvHI99cW2ofQKHx-102" value="Viendo detalle&lt;div&gt;de socio&lt;/div&gt;" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="1280" y="1360" width="120" height="80" as="geometry" />
+          <mxGeometry x="1280" y="980" width="120" height="80" as="geometry" />
         </mxCell>
         <mxCell id="KOnt1ZvHI99cW2ofQKHx-103" value="" style="endArrow=none;dashed=1;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="KOnt1ZvHI99cW2ofQKHx-99" target="KOnt1ZvHI99cW2ofQKHx-102">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
-            <mxPoint x="1240" y="1450" as="sourcePoint" />
-            <mxPoint x="1240.29" y="1499" as="targetPoint" />
+            <mxPoint x="1240" y="1070" as="sourcePoint" />
+            <mxPoint x="1240.29" y="1119" as="targetPoint" />
           </mxGeometry>
         </mxCell>
         <mxCell id="KOnt1ZvHI99cW2ofQKHx-104" value="&amp;lt;e&amp;gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="KOnt1ZvHI99cW2ofQKHx-103">
@@ -400,12 +405,12 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="KOnt1ZvHI99cW2ofQKHx-105" value="Eliminando&amp;nbsp;&lt;div&gt;socio&lt;/div&gt;" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="1500" y="1360" width="120" height="80" as="geometry" />
+          <mxGeometry x="1500" y="980" width="120" height="80" as="geometry" />
         </mxCell>
         <mxCell id="KOnt1ZvHI99cW2ofQKHx-106" value="" style="endArrow=none;dashed=1;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
-            <mxPoint x="1400" y="1399.6399999999999" as="sourcePoint" />
-            <mxPoint x="1500" y="1399.6399999999999" as="targetPoint" />
+            <mxPoint x="1400" y="1019.64" as="sourcePoint" />
+            <mxPoint x="1500" y="1019.64" as="targetPoint" />
           </mxGeometry>
         </mxCell>
         <mxCell id="KOnt1ZvHI99cW2ofQKHx-107" value="&amp;lt;e&amp;gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="KOnt1ZvHI99cW2ofQKHx-106">
@@ -414,15 +419,15 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="KOnt1ZvHI99cW2ofQKHx-108" value="Listando&lt;br&gt;instructores" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="1060" y="1471" width="120" height="80" as="geometry" />
+          <mxGeometry x="1060" y="1091" width="120" height="80" as="geometry" />
         </mxCell>
         <mxCell id="KOnt1ZvHI99cW2ofQKHx-109" value="Viendo detalle&lt;div&gt;de instructor&lt;/div&gt;" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="1280" y="1471" width="120" height="80" as="geometry" />
+          <mxGeometry x="1280" y="1091" width="120" height="80" as="geometry" />
         </mxCell>
         <mxCell id="KOnt1ZvHI99cW2ofQKHx-110" value="" style="endArrow=none;dashed=1;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="KOnt1ZvHI99cW2ofQKHx-108" target="KOnt1ZvHI99cW2ofQKHx-109">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
-            <mxPoint x="1240" y="1561" as="sourcePoint" />
-            <mxPoint x="1240.29" y="1610" as="targetPoint" />
+            <mxPoint x="1240" y="1181" as="sourcePoint" />
+            <mxPoint x="1240.29" y="1230" as="targetPoint" />
           </mxGeometry>
         </mxCell>
         <mxCell id="KOnt1ZvHI99cW2ofQKHx-111" value="&amp;lt;e&amp;gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="KOnt1ZvHI99cW2ofQKHx-110">
@@ -431,41 +436,15 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="KOnt1ZvHI99cW2ofQKHx-112" value="Eliminando&amp;nbsp;&lt;div&gt;instructor&lt;/div&gt;" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="1500" y="1471" width="120" height="80" as="geometry" />
+          <mxGeometry x="1500" y="1091" width="120" height="80" as="geometry" />
         </mxCell>
         <mxCell id="KOnt1ZvHI99cW2ofQKHx-113" value="" style="endArrow=none;dashed=1;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
-            <mxPoint x="1400" y="1510.6399999999999" as="sourcePoint" />
-            <mxPoint x="1500" y="1510.6399999999999" as="targetPoint" />
+            <mxPoint x="1400" y="1130.6399999999999" as="sourcePoint" />
+            <mxPoint x="1500" y="1130.6399999999999" as="targetPoint" />
           </mxGeometry>
         </mxCell>
         <mxCell id="KOnt1ZvHI99cW2ofQKHx-114" value="&amp;lt;e&amp;gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="KOnt1ZvHI99cW2ofQKHx-113">
-          <mxGeometry x="0.1387" y="-3" relative="1" as="geometry">
-            <mxPoint x="-6" y="-8" as="offset" />
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="KOnt1ZvHI99cW2ofQKHx-115" value="Creando&amp;nbsp;&lt;div&gt;socio&lt;/div&gt;" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="1060" y="1000" width="120" height="80" as="geometry" />
-        </mxCell>
-        <mxCell id="KOnt1ZvHI99cW2ofQKHx-119" value="Creando&amp;nbsp;&lt;div&gt;instructor&lt;/div&gt;" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="1060" y="1120" width="120" height="80" as="geometry" />
-        </mxCell>
-        <mxCell id="KOnt1ZvHI99cW2ofQKHx-120" value="Creando&amp;nbsp;&lt;div&gt;administrador&lt;/div&gt;" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="1060" y="1240" width="120" height="80" as="geometry" />
-        </mxCell>
-        <mxCell id="KOnt1ZvHI99cW2ofQKHx-121" value="Listando&lt;br&gt;instructores" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="1060" y="1600" width="120" height="80" as="geometry" />
-        </mxCell>
-        <mxCell id="KOnt1ZvHI99cW2ofQKHx-122" value="Viendo detalle&lt;div&gt;de instructor&lt;/div&gt;" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="1280" y="1600" width="120" height="80" as="geometry" />
-        </mxCell>
-        <mxCell id="KOnt1ZvHI99cW2ofQKHx-123" value="" style="endArrow=none;dashed=1;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="KOnt1ZvHI99cW2ofQKHx-121" target="KOnt1ZvHI99cW2ofQKHx-122">
-          <mxGeometry width="50" height="50" relative="1" as="geometry">
-            <mxPoint x="1240" y="1690" as="sourcePoint" />
-            <mxPoint x="1240.29" y="1739" as="targetPoint" />
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="KOnt1ZvHI99cW2ofQKHx-124" value="&amp;lt;e&amp;gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="KOnt1ZvHI99cW2ofQKHx-123">
           <mxGeometry x="0.1387" y="-3" relative="1" as="geometry">
             <mxPoint x="-6" y="-8" as="offset" />
           </mxGeometry>
